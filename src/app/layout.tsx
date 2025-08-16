@@ -8,7 +8,7 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://buildwithdesmond-o0eaad9xa-desmond-asiedus-projects.vercel.app'),
+  metadataBase: new URL('https://buildwithdesmond.vercel.app'),
   title: {
     default: 'The Geek Toolbox - Custom Digital Tools & Web Development Portfolio',
     template: '%s | The Geek Toolbox'
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://buildwithdesmond-o0eaad9xa-desmond-asiedus-projects.vercel.app',
+    url: 'https://buildwithdesmond.vercel.app',
     title: 'The Geek Toolbox - Custom Digital Tools & Web Development Portfolio',
     description: 'Professional web development and custom digital tools for businesses, startups, and entrepreneurs. AI-driven development with rapid delivery cycles.',
     siteName: 'The Geek Toolbox',
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     site: '@TheGeekToolbox',
   },
   alternates: {
-    canonical: 'https://buildwithdesmond-o0eaad9xa-desmond-asiedus-projects.vercel.app',
+    canonical: 'https://buildwithdesmond.vercel.app',
   },
   other: {
     'geo.region': 'GH',
