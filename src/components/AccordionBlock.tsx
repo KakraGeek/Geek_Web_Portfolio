@@ -24,7 +24,7 @@ function DesignPhilosophyContent() {
             <Heart className="w-6 h-6" />
           </div>
           <div className="text-gray-300">
-            <span className="font-semibold text-soft-rose">Empathy:</span> I design with the user's needs, frustrations, and goals in mind.
+            <span className="font-semibold text-soft-rose">Empathy:</span> I design with the user&apos;s needs, frustrations, and goals in mind.
           </div>
         </div>
         
@@ -66,7 +66,7 @@ function HowIWorkContent() {
           </div>
           <div className="text-gray-300">
             <h4 className="font-semibold text-electric-blue mb-1">Step 1: We Talk</h4>
-            <p>You tell me what's not working or what you dream of building. I listen — deeply.</p>
+            <p>You tell me what&apos;s not working or what you dream of building. I listen — deeply.</p>
           </div>
         </div>
         
@@ -96,14 +96,14 @@ function HowIWorkContent() {
           </div>
           <div className="text-gray-300">
             <h4 className="font-semibold text-soft-rose mb-1">Step 4: We Launch</h4>
-            <p>And when it's live, I'm still around. Real-world feedback matters — and I keep refining.</p>
+            <p>And when it&apos;s live, I&apos;m still around. Real-world feedback matters — and I keep refining.</p>
           </div>
         </div>
       </div>
       
       <div className="mt-6 p-4 bg-gradient-to-r from-electric-blue/10 to-vivid-lime/10 border border-electric-blue/20 rounded-lg">
         <p className="text-gray-300 text-center italic">
-          Feedback is continuous, not occasional. It's how we get it right—together.
+          Feedback is continuous, not occasional. It&apos;s how we get it right—together.
         </p>
       </div>
     </motion.div>
