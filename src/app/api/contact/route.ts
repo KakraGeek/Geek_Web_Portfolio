@@ -1,16 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { contactFormSchema, apiResponseSchema } from '@/lib/validations'
 import { contactRateLimiter } from '@/lib/rate-limit'
-import nodemailer from 'nodemailer'
+import sgMail from '@sendgrid/mail'
 
-// Email configuration
-const transporter = nodemailer.createTransport({
-  service: 'gmail', // You can change this to your preferred email service
-  auth: {
-    user: process.env.EMAIL_USER || 'desmond.asiedu@gmail.com',
-    pass: process.env.EMAIL_PASS || '', // Use app password for Gmail
-  },
-})
+// SendGrid configuration
+sgMail.setApiKey(process.env.SENDGRID_API_KEY || '')
 
 export async function POST(request: NextRequest) {
   try {
@@ -51,10 +45,10 @@ export async function POST(request: NextRequest) {
 
     const { name, email, subject, message } = body
 
-    // Email content
-    const mailOptions = {
-      from: process.env.EMAIL_USER || 'desmond.asiedu@gmail.com',
+    // Email content for SendGrid
+    const msg = {
       to: ['desmond.asiedu@gmail.com', 'thegeektoolbox@gmail.com'],
+      from: process.env.SENDGRID_FROM_EMAIL || 'desmond.asiedu@gmail.com', // Verified sender
       subject: `Portfolio Contact: ${subject}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -96,8 +90,8 @@ From: The Geek Toolbox Portfolio Contact Form
       `,
     }
 
-    // Send email
-    await transporter.sendMail(mailOptions)
+    // Send email using SendGrid
+    await sgMail.send(msg)
 
     // Return success response
     return NextResponse.json(
