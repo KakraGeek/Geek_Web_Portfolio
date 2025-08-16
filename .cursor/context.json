@@ -1,0 +1,20 @@
+{
+  "project_name": "The Geek Toolbox \u2013 Portfolio",
+  "instructions": [
+    "Follow prd.md and architecture_schema.md exactly.",
+    "Generate native files only (.tsx, .ts, .md, .json, etc.). No placeholders or summaries.",
+    "Use brand colors from brand/brand_palette.png and /public/brand/portfolio_logo.svg.",
+    "Maintain notify \u2192 approve \u2192 proceed workflow for major steps.",
+    "Enforce WCAG AA and OWASP-minded API design."
+  ],
+  "important_files": [
+    "prd.md",
+    "architecture_schema.md",
+    "smart_prompts_tasks.md",
+    "implementation.mdc"
+  ],
+  "artifacts": {
+    "brand_palette": "brand/brand_palette.png",
+    "logo": "brand/portfolio_logo.svg"
+  }
+}

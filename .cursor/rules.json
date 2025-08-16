@@ -1,0 +1,18 @@
+{
+  "hard_rules": [
+    "No placeholder TODOs in implementation; ship production-ready code.",
+    "Components must use shadcn/ui and be accessible via keyboard.",
+    "Contact API must validate via zod and apply basic rate limiting.",
+    "Playwright smoke tests must be added and runnable with `npx playwright test`.",
+    "Respect reduced motion preferences in animations."
+  ],
+  "non_goals": [
+    "No database or user auth for v1.",
+    "No CMS integration for v1."
+  ],
+  "quality_gates": [
+    "Lighthouse \u226595 (mobile)",
+    "Axe a11y scan: no critical issues",
+    "Basic security headers present"
+  ]
+}

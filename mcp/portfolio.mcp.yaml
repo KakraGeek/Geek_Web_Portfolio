@@ -1,0 +1,30 @@
+name: portfolio
+description: "MCP config to guide Cursor agent for The Geek Toolbox Portfolio."
+version: "1.0.1"
+
+triggers:
+  - command: "Initialize portfolio build"
+    steps:
+      - "Read prd.md and architecture_schema.md"
+      - "Follow implementation.mdc for workflow sequencing"
+      - "Apply smart_prompts_tasks.md for detailed requirements in each phase"
+      - "Set up Next.js + TS + Tailwind + shadcn/ui + lucide-react + framer-motion"
+      - "Implement pages, components, and API routes"
+      - "Add Playwright smoke tests"
+      - "Ensure SEO, accessibility, and performance targets"
+      - "Prepare for Vercel deploy"
+
+files:
+  context: ".cursor/context.json"
+  rules: ".cursor/rules.json"
+
+scripts:
+  dev: "next dev"
+  build: "next build"
+  start: "next start"
+  test: "playwright test"
+
+notes:
+  - "Use implementation.mdc for the order of execution."
+  - "Use smart_prompts_tasks.md for detailed coding requirements."
+  - "Enforce accessibility (WCAG AA), security (OWASP-minded API), and SEO requirements."
