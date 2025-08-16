@@ -3,14 +3,20 @@ import { contactFormSchema, apiResponseSchema } from '@/lib/validations'
 import { contactRateLimiter } from '@/lib/rate-limit'
 import { Resend } from 'resend'
 
-// Resend configuration
-const resend = new Resend(process.env.RESEND_API_KEY || '')
+// Resend configuration - only initialize when needed
+let resend: Resend | null = null
 const fromEmail = 'onboarding@resend.dev' // Use Resend's default domain for testing
 
-console.log('Resend Config:', {
-  hasApiKey: !!process.env.RESEND_API_KEY,
-  fromEmail,
-})
+function getResendClient(): Resend {
+  if (!resend) {
+    const apiKey = process.env.RESEND_API_KEY
+    if (!apiKey) {
+      throw new Error('RESEND_API_KEY environment variable is not set')
+    }
+    resend = new Resend(apiKey)
+  }
+  return resend
+}
 
 export async function POST(request: NextRequest) {
   try {
@@ -61,7 +67,7 @@ export async function POST(request: NextRequest) {
         hasMessage: !!message
       })
       
-      const result = await resend.emails.send({
+      const result = await getResendClient().emails.send({
         from: fromEmail,
         to: ['desmond.asiedu@gmail.com', 'thegeektoolbox@gmail.com'],
         subject: `Portfolio Contact: ${subject}`,
@@ -108,9 +114,11 @@ From: The Geek Toolbox Portfolio Contact Form
       console.log('Resend result:', result)
       
       // Check if Resend returned an error
-      if (result.error) {
+      if ('error' in result && result.error) {
         console.error('Resend returned error:', result.error)
-        throw new Error(`Email sending failed: ${result.error.error}`)
+        // Convert error to string for safe handling
+        const errorString = JSON.stringify(result.error)
+        throw new Error(`Email sending failed: ${errorString}`)
       }
       
       console.log('Email sent successfully!')

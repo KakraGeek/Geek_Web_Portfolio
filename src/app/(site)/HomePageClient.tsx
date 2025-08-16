@@ -26,9 +26,8 @@ export function HomePageClient() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden">
-        {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-noir via-noir to-electric-blue/5" />
+      <section className="relative py-20 px-6 bg-gradient-to-br from-noir via-noir to-electric-blue/5 overflow-hidden">
+
         
         {/* Animated background elements */}
         <motion.div
@@ -41,7 +40,7 @@ export function HomePageClient() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute top-20 left-20 w-32 h-32 bg-electric-blue/10 rounded-full blur-xl"
+          className="absolute top-12 left-8 sm:top-20 sm:left-20 w-24 h-24 sm:w-32 sm:h-32 bg-electric-blue/10 rounded-full blur-xl"
         />
         <motion.div
           animate={{
@@ -53,16 +52,16 @@ export function HomePageClient() {
             repeat: Infinity,
             ease: "easeInOut"
           }}
-          className="absolute bottom-20 right-20 w-40 h-40 bg-vivid-lime/10 rounded-full blur-xl"
+          className="absolute bottom-12 right-8 sm:bottom-20 sm:right-20 w-32 h-32 sm:w-40 sm:h-40 bg-vivid-lime/10 rounded-full blur-xl"
         />
 
-        <div className="relative z-10 text-center max-w-4xl mx-auto">
+        <div className="relative z-10 text-center max-w-4xl mx-auto pt-16">
           {/* Main Tagline */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight"
+            className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-3 sm:mb-6 leading-tight"
           >
             Custom Digital Tools &{' '}
             <span className="bg-gradient-to-r from-electric-blue to-vivid-lime bg-clip-text text-transparent">
@@ -75,7 +74,7 @@ export function HomePageClient() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl md:text-2xl text-gray-300 mb-4 sm:mb-8 max-w-3xl mx-auto leading-relaxed"
           >
             For professionals, teams, and entrepreneurs seeking rapid, AI-driven delivery
           </motion.p>
