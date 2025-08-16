@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: '/about',
     images: [
       {
-        url: '/brand/social_preview.jpg',
+        url: 'https://buildwithdesmond.vercel.app/brand/social_preview.jpg',
         width: 1200,
         height: 630,
         alt: 'Desmond Asiedu - Web Developer & Digital Tools Creator',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     title: 'About Me - Web Developer & Digital Tools Creator',
     description: 'Meet Desmond Asiedu, a passionate web developer and digital tools creator based in Accra, Ghana. Learn about my journey, mission, and approach to creating impactful digital solutions.',
-    images: ['/brand/social_preview.jpg'],
+    images: ['https://buildwithdesmond.vercel.app/brand/social_preview.jpg'],
   },
   alternates: {
     canonical: '/about',

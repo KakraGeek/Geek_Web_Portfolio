@@ -14,20 +14,20 @@ export const metadata: Metadata = {
     title: 'Custom Digital Tools & Web Development Portfolio',
     description: 'Professional web development and custom digital tools for businesses, startups, and entrepreneurs. AI-driven development with rapid delivery cycles.',
     url: '/',
-    images: [
-      {
-        url: '/brand/social_preview.jpg',
-        width: 1200,
-        height: 630,
-        alt: 'The Geek Toolbox - Professional Web Development Portfolio',
-        type: 'image/jpeg',
-      },
-    ],
+         images: [
+       {
+         url: 'https://buildwithdesmond.vercel.app/brand/social_preview.jpg',
+         width: 1200,
+         height: 630,
+         alt: 'The Geek Toolbox - Professional Web Development Portfolio',
+         type: 'image/jpeg',
+       },
+     ],
   },
   twitter: {
     title: 'Custom Digital Tools & Web Development Portfolio',
     description: 'Professional web development and custom digital tools for businesses, startups, and entrepreneurs. AI-driven development with rapid delivery cycles.',
-    images: ['/brand/social_preview.jpg'],
+         images: ['https://buildwithdesmond.vercel.app/brand/social_preview.jpg'],
   },
   alternates: {
     canonical: '/',

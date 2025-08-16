@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     url: '/contact',
     images: [
       {
-        url: '/brand/social_preview.jpg',
+        url: 'https://buildwithdesmond.vercel.app/brand/social_preview.jpg',
         width: 1200,
         height: 630,
         alt: 'Contact The Geek Toolbox - Web Development & Digital Tools',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: {
     title: 'Contact Us - Get In Touch for Web Development & Digital Tools',
     description: 'Ready to start your project? Contact Desmond Asiedu for professional web development, custom digital tools, and consultation services. Based in Accra, Ghana.',
-    images: ['/brand/social_preview.jpg'],
+    images: ['https://buildwithdesmond.vercel.app/brand/social_preview.jpg'],
   },
   alternates: {
     canonical: '/contact',
