@@ -64,26 +64,33 @@ export const metadata: Metadata = {
     title: 'The Geek Toolbox - Custom Digital Tools & Web Development Portfolio',
     description: 'Professional web development and custom digital tools for businesses, startups, and entrepreneurs. AI-driven development with rapid delivery cycles.',
     siteName: 'The Geek Toolbox',
-         images: [
-       {
-         url: 'https://buildwithdesmond.vercel.app/brand/social_preview.jpg',
-         width: 1200,
-         height: 630,
-         alt: 'The Geek Toolbox - Professional Web Development Portfolio',
-         type: 'image/jpeg',
-       },
-     ],
+    images: [
+      {
+        url: 'https://buildwithdesmond.vercel.app/brand/social_preview.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'The Geek Toolbox - Professional Web Development Portfolio',
+        type: 'image/jpeg',
+      },
+      {
+        url: 'https://buildwithdesmond.vercel.app/brand/social_preview.png',
+        width: 1200,
+        height: 630,
+        alt: 'The Geek Toolbox - Professional Web Development Portfolio',
+        type: 'image/png',
+      },
+    ],
     countryName: 'Ghana',
     emails: ['desmond.asiedu@gmail.com', 'thegeektoolbox@gmail.com'],
   },
-     twitter: {
-     card: 'summary_large_image',
-     title: 'The Geek Toolbox - Custom Digital Tools & Web Development Portfolio',
-     description: 'Professional web development and custom digital tools for businesses, startups, and entrepreneurs. AI-driven development with rapid delivery cycles.',
-     images: ['https://buildwithdesmond.vercel.app/brand/social_preview.jpg'],
-     creator: '@KakraGeek',
-     site: '@TheGeekToolbox',
-   },
+       twitter: {
+    card: 'summary_large_image',
+    title: 'The Geek Toolbox - Custom Digital Tools & Web Development Portfolio',
+    description: 'Professional web development and custom digital tools for businesses, startups, and entrepreneurs. AI-driven development with rapid delivery cycles.',
+    images: ['https://buildwithdesmond.vercel.app/brand/social_preview.jpg'],
+    creator: '@KakraGeek',
+    site: '@TheGeekToolbox',
+  },
   alternates: {
     canonical: 'https://buildwithdesmond.vercel.app',
   },
@@ -113,12 +120,27 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable}`}>
-      <head>
-        <link rel="icon" href="/brand/portfolio_logo.svg" />
-        <link rel="apple-touch-icon" href="/brand/portfolio_logo.svg" />
-        <meta name="theme-color" content="#0A0A0A" />
-        <meta name="msapplication-TileColor" content="#0A0A0A" />
-      </head>
+             <head>
+         <link rel="icon" href="/brand/portfolio_logo.svg" />
+         <link rel="apple-touch-icon" href="/brand/portfolio_logo.svg" />
+         <meta name="theme-color" content="#0A0A0A" />
+         <meta name="msapplication-TileColor" content="#0A0A0A" />
+         
+         {/* WhatsApp and Mobile Social Preview Optimizations */}
+         <meta property="og:image" content="https://buildwithdesmond.vercel.app/brand/social_preview.jpg" />
+         <meta property="og:image:width" content="1200" />
+         <meta property="og:image:height" content="630" />
+         <meta property="og:image:type" content="image/jpeg" />
+         <meta property="og:image:alt" content="The Geek Toolbox - Professional Web Development Portfolio" />
+         
+         {/* Twitter Card Optimizations */}
+         <meta name="twitter:image" content="https://buildwithdesmond.vercel.app/brand/social_preview.jpg" />
+         <meta name="twitter:image:alt" content="The Geek Toolbox - Professional Web Development Portfolio" />
+         
+         {/* WhatsApp Specific */}
+         <meta property="og:image:secure_url" content="https://buildwithdesmond.vercel.app/brand/social_preview.jpg" />
+         <meta property="og:image:secure_url" content="https://buildwithdesmond.vercel.app/brand/social_preview.png" />
+       </head>
       <body className={`${inter.className} antialiased bg-noir text-white`}>
         {children}
       </body>
