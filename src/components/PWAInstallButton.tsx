@@ -20,9 +20,9 @@ export function PWAInstallButton() {
     }
 
     // Listen for beforeinstallprompt event
-    const handleBeforeInstallPrompt = (e: BeforeInstallPromptEvent) => {
+    const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
-      setDeferredPrompt(e);
+      setDeferredPrompt(e as BeforeInstallPromptEvent);
       setShowInstallPrompt(true);
     };
 
@@ -33,7 +33,7 @@ export function PWAInstallButton() {
       setDeferredPrompt(null);
     };
 
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
+    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt as EventListener);
     window.addEventListener('appinstalled', handleAppInstalled);
 
     return () => {
