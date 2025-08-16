@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import '../styles/globals.css'
+import { PWAInstallButton } from '../components/PWAInstallButton'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -131,6 +132,7 @@ export default function RootLayout({
        </head>
       <body className={`${inter.className} antialiased bg-noir text-white`}>
         {children}
+        <PWAInstallButton />
       </body>
     </html>
   )
