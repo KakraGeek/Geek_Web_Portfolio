@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Download, X } from 'lucide-react';
 
 export function PWAInstallButton() {
-  const [deferredPrompt, setDeferredPrompt] = useState<any>(null);
+  const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null);
   const [showInstallPrompt, setShowInstallPrompt] = useState(false);
   const [isInstalled, setIsInstalled] = useState(false);
 
